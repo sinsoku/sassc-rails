@@ -1,9 +1,9 @@
 require "sprockets/version"
-require "sprockets/sass_template"
+require "sprockets/sass_processor"
 require "sprockets/utils"
 
 module SassC::Rails
-  class SassTemplate < Sprockets::SassTemplate
+  class SassTemplate < Sprockets::SassProcessor
     module Sprockets3
       def call(input)
         context = input[:environment].context_class.new(input)
